@@ -1,0 +1,283 @@
+.sobre-mim-page {
+    padding-top: 64px;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.sobre-hero {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sobre-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+}
+
+.sobre-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.sobre-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    font-weight: 400;
+    margin: 0;
+}
+
+.sobre-hero-image {
+    position: relative;
+}
+
+.sobre-image-wrapper {
+    aspect-ratio: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.sobre-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.6), transparent);
+}
+
+/* Biografia Section - CENTRALIZADA */
+.biografia-section {
+    padding: 4rem 2rem;
+    background: rgba(18, 18, 18, 0.3);
+}
+
+.biografia-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.section-title .material-symbols-outlined {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.biografia-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: justify;
+}
+
+.biografia-content p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.biografia-content strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Bio Highlight Box */
+.bio-highlight {
+    background: linear-gradient(135deg, rgba(5, 102, 217, 0.1), rgba(183, 109, 255, 0.1));
+    border: 1px solid rgba(5, 102, 217, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.bio-highlight .material-symbols-outlined {
+    color: var(--color-primary);
+    font-size: 2rem;
+    flex-shrink: 0;
+    font-variation-settings: 'FILL' 1;
+}
+
+.bio-highlight p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+/* Timeline Section - CENTRALIZADA */
+.timeline-section {
+    padding: 4rem 2rem;
+}
+
+.timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    border: 3px solid var(--color-background);
+    box-shadow: 0 0 0 4px rgba(5, 102, 217, 0.2);
+}
+
+.timeline-year {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: rgba(5, 102, 217, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(5, 102, 217, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.timeline-description {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1.0625rem;
+}
+
+/* CTA Section */
+.cta-section {
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(5, 102, 217, 0.1), rgba(183, 109, 255, 0.1));
+    border-radius: 2rem;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    font-family: 'Sora', sans-serif;
+}
+
+.cta-description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin: 0 0 2rem 0;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .sobre-hero {
+        grid-template-columns: 1fr 1fr;
+        padding: 6rem 2rem;
+    }
+
+    .sobre-title {
+        font-size: 3.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sobre-title {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .cta-title {
+        font-size: 3rem;
+    }
+}

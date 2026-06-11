@@ -1,0 +1,339 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 64px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-icon {
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: block;
+}
+
+.menu-icon:active {
+    transform: scale(0.95);
+}
+
+/* ========== HACKER LOGO ANIMATION ========== */
+.logo-link {
+    text-decoration: none;
+    display: block;
+}
+
+.hacker-container-header {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Logo button com efeito hacker - COMPACTO */
+.hacker-btn-header {
+    padding: 6px 12px;
+    background: rgba(20, 20, 60, 0.4);
+    color: #b3b3ff;
+    border: 1.5px solid #4b4bff;
+    font-family: 'Sora', 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    box-shadow:
+        0 0 10px rgba(75, 75, 255, 0.2),
+        inset 0 0 8px rgba(75, 75, 255, 0.15);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Terminal flicker effect */
+.hacker-btn-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(75, 75, 255, 0.3),
+            transparent);
+    animation: terminal-swipe 3s infinite linear;
+    pointer-events: none;
+}
+
+.hacker-container-header:hover .hacker-btn-header::before {
+    animation: terminal-swipe 1s infinite linear;
+}
+
+.hacker-container-header:hover .hacker-btn-header {
+    color: #ffffff;
+    box-shadow:
+        0 0 20px rgba(75, 75, 255, 0.5),
+        0 0 30px rgba(75, 75, 255, 0.3);
+    transform: scale(1.02);
+    background: rgba(20, 20, 60, 0.6);
+}
+
+/* Cursor blink effect - menor */
+.hacker-btn-header::after {
+    content: "_";
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ff99;
+    font-size: 14px;
+    animation: cursor-blink 0.8s infinite step-end;
+}
+
+/* Tooltip com efeito hacker */
+.hacker-tooltip-header {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    background: rgba(10, 10, 40, 0.95);
+    color: #b3b3ff;
+    padding: 6px 12px;
+    border: 1px solid #4b4bff;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(75, 75, 255, 0.3);
+    z-index: 100;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    pointer-events: none;
+}
+
+/* Typing glitch effect */
+.hacker-tooltip-header::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #00ff99;
+    opacity: 0.6;
+    animation: typing-glitch 1.2s infinite steps(5);
+    z-index: -1;
+    padding: 6px 12px;
+}
+
+/* Subtle glow border */
+.hacker-tooltip-header::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border: 1px solid #4b4bff;
+    opacity: 0.5;
+    filter: blur(3px);
+    animation: glow-pulse 2s infinite ease-in-out;
+    border-radius: 4px;
+}
+
+/* Hacker prompt symbol */
+.hacker-tooltip-header span::after {
+    content: "$>";
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+    color: #00ff99;
+    font-size: 12px;
+    text-shadow: 0 0 8px #00ff99;
+    animation: prompt-flick 1s infinite alternate;
+}
+
+/* Tooltip hover effect */
+.hacker-container-header:hover .hacker-tooltip-header {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    bottom: 140%;
+}
+
+/* Animations */
+@keyframes terminal-swipe {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes cursor-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes typing-glitch {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    20% {
+        clip-path: inset(0 80% 0 0);
+    }
+
+    40% {
+        clip-path: inset(0 60% 0 0);
+    }
+
+    60% {
+        clip-path: inset(0 40% 0 0);
+    }
+
+    80% {
+        clip-path: inset(0 20% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes prompt-flick {
+    0% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ========== RESTO DO HEADER ========== */
+.nav-desktop {
+    display: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(5, 102, 217, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar .material-symbols-outlined {
+    font-size: 16px;
+}
+
+/* Mobile Menu */
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: flex;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+}
+
+/* Mobile - Logo ainda menor */
+@media (max-width: 768px) {
+    .hacker-btn-header {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
+
+    .hacker-tooltip-header {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .header-content {
+        padding: 0 1rem;
+    }
+}

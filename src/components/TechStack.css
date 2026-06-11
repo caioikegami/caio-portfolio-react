@@ -1,0 +1,234 @@
+.techstack-section {
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.techstack-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.techstack-title .material-symbols-outlined {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.techstack-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Tech Cards */
+.tech-card {
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(5, 102, 217, 0.2);
+    transform: translateY(-4px);
+}
+
+/* Category Cards */
+.tech-card-category {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tech-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tech-icon {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.tech-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.tech-card-description {
+    color: var(--color-text-muted);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Tech Icons Grid */
+.tech-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-icon-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+.tech-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(5, 102, 217, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.tech-icon-item:hover .tech-logo {
+    transform: scale(1.1);
+}
+
+.tech-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Performance Card */
+.tech-card-performance {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.8), rgba(5, 102, 217, 0.05));
+}
+
+.performance-content {
+    flex: 1;
+}
+
+.performance-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.performance-icon-box {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.performance-icon-box:hover {
+    transform: scale(1.1);
+    border-color: var(--color-primary);
+}
+
+.performance-icon-bolt {
+    color: var(--color-secondary);
+}
+
+.performance-icon-security {
+    color: var(--color-tertiary);
+}
+
+.performance-icon-graph {
+    color: var(--color-primary);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .techstack-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-icons-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .techstack-title {
+        font-size: 2.5rem;
+    }
+
+    .tech-card-title {
+        font-size: 1.75rem;
+    }
+
+    .tech-card-performance {
+        grid-column: span 2;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .performance-content {
+        max-width: 60%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .techstack-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-icons-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .techstack-title {
+        font-size: 2.5rem;
+    }
+
+    .tech-card-title {
+        font-size: 1.75rem;
+    }
+
+    .techstack-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tech-card-performance {
+        grid-column: span 3;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .performance-content {
+        max-width: 60%;
+    }
+}

@@ -1,0 +1,303 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Content */
+.modal-content {
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--color-text);
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-primary);
+    transform: rotate(90deg);
+}
+
+/* Modal Header */
+.modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Sora', sans-serif;
+}
+
+.modal-subtitle {
+    color: var(--color-text-muted);
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+}
+
+/* Contact Cards Grid */
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Contact Card */
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+/* WhatsApp Card Highlight */
+.contact-card-whatsapp {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(18, 18, 18, 0.8));
+    border-color: rgba(37, 211, 102, 0.3);
+}
+
+.contact-card-whatsapp:hover {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(18, 18, 18, 0.9));
+    border-color: rgba(37, 211, 102, 0.5);
+}
+
+/* Icon Wrapper */
+.contact-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, rgba(5, 102, 217, 0.2), rgba(183, 109, 255, 0.2));
+    border: 1px solid rgba(5, 102, 217, 0.3);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.contact-icon-wrapper .material-symbols-outlined {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #0566d9, #b76dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card Title */
+.contact-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+}
+
+.contact-card-subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0 0 1rem 0;
+}
+
+/* Contact Info */
+.contact-info {
+    background: rgba(5, 102, 217, 0.1);
+    border: 1px solid rgba(5, 102, 217, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.contact-info-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Contact Button */
+.contact-btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-btn-email {
+    background: rgba(5, 102, 217, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(5, 102, 217, 0.3);
+}
+
+.contact-btn-email:hover {
+    background: rgba(5, 102, 217, 0.3);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.contact-btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: 1px solid #25D366;
+}
+
+.contact-btn-whatsapp:hover {
+    background: #20BD5A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.social-btn {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.social-btn-linkedin {
+    background: rgba(10, 102, 194, 0.1);
+    color: #ffffff;
+    border-color: rgba(10, 102, 194, 0.3);
+}
+
+.social-btn-linkedin:hover {
+    background: rgba(10, 102, 194, 0.2);
+    border-color: #0A66C2;
+    transform: translateY(-2px);
+}
+
+.social-btn-github {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-btn-github:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .contact-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .modal-content {
+        padding: 3rem;
+    }
+
+    .modal-title {
+        font-size: 2.5rem;
+    }
+
+    .social-buttons {
+        flex-direction: row;
+    }
+}
+
+/* Scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}
