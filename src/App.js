@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/caio-portfolio-react">
       <div className="App">
         <Header />
         <main>
