@@ -41,7 +41,8 @@ const SobreMim = () => {
                 </div>
                 <div className="sobre-hero-image">
                     <div className="sobre-image-wrapper">
-                        <img src="/assets/Caio1.jpeg" alt="Caio Ikegami" className="sobre-profile-img" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/Caio1.jpeg`} 
+                        alt="Caio Ikegami" className="sobre-profile-img" />
                         <div className="sobre-image-overlay"></div>
                     </div>
                 </div>

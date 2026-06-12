@@ -13,7 +13,7 @@ const Projects = () => {
             id: 1,
             title: 'Mario Bros Serviços 🍄',
             description: 'Projeto de estudo para sites de serviços. Utilizado HTML, CSS e JavaScript para criar uma experiência interativa e visualmente atraente, inspirada no universo do Mario Bros.',
-            image: './assets/mariodesktop.png',
+            image: `${process.env.PUBLIC_URL}/assets/mariodesktop.png`,
             tags: ['Services', 'Front-end', 'HTML', 'CSS', 'JavaScript'],
             tagColors: ['primary', 'primary'],
             link: 'https://caioikegami.github.io/SuperMario/'
@@ -22,7 +22,7 @@ const Projects = () => {
             id: 2,
             title: 'Site Márcio Conceição - Programa Compatíveis',
             description: 'Site com Pagina de apresentação do programa compatíveis, utilizado Tailwind para criar uma interface dinâmica e responsiva, com foco em design moderno e usabilidade.',
-            image: './assets/projetocompativeis.png',
+            image: `${process.env.PUBLIC_URL}/assets/projetocompativeis.png'`,
             tags: ['Services', 'Front-end', 'Tailwind'],
             tagColors: ['primary', 'primary'],
             link: 'https://caioikegami.github.io/projeto-compativeis/compativeis.html'
@@ -31,17 +31,17 @@ const Projects = () => {
             id: 3,
             title: 'DevSorteio',
             description: 'Ferramenta de Sorteio de números. Aonde você pode inserir dois valores para sortear números dentro do intervalo deles.',
-            image: './assets/devsorteio.png',
-            tags: ['Tool','Front-end', 'HTML','CSS', 'JavaScript'],
-            tagColors: ['primary','primary','secundary'],
+            image: `${process.env.PUBLIC_URL}/assets/devsorteio.png'`,
+            tags: ['Tool', 'Front-end', 'HTML', 'CSS', 'JavaScript'],
+            tagColors: ['primary', 'primary', 'secundary'],
             link: 'https://caioikegami.github.io/DevSorteioJS/'
         },
         {
             id: 4,
             title: 'Ike Convert-Money',
             description: 'Ferramenta para conversão de moedas, aplicando aprendizado em HTML, CSS e Javascript',
-            image: './assets/ikeconvertmoney.png',
-            tags: ['Tool', 'Front-end','HTML','CSS','JavaScript'],
+            image: `${process.env.PUBLIC_URL}/assets/ikeconvertmoney.png'`,
+            tags: ['Tool', 'Front-end', 'HTML', 'CSS', 'JavaScript'],
             tagColors: ['primary', 'primary'],
             link: 'https://caioikegami.github.io/ConvertMoneyJS/'
         },
@@ -49,8 +49,8 @@ const Projects = () => {
             id: 4,
             title: 'Ikepô-Jokenpô',
             description: 'Jogo de Jokenpô para praticar HTML, CSS e JavaScript',
-            image: './assets/ikepojokenpo.png',
-            tags: ['Game', 'Front-end','HTML','CSS','JavaScript'],
+            image: `${process.env.PUBLIC_URL}/assets/ikepojokenpo.png`,
+            tags: ['Game', 'Front-end', 'HTML', 'CSS', 'JavaScript'],
             tagColors: ['primary', 'primary'],
             link: 'https://caioikegami.github.io/DESAFIOJOKENPO/'
         }
@@ -63,7 +63,7 @@ const Projects = () => {
                     <h3 className="projects-title">Projetos em Destaque</h3>
                     <p className="projects-subtitle">Trabalhos recentes que unem técnica e estética.</p>
                 </div>
-               {/*<a href="#projetos" className="projects-link">
+                {/*<a href="#projetos" className="projects-link">
                     Ver Todos
                     <span className="material-symbols-outlined">north_east</span>
                 </a>*/}
