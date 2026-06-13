@@ -18,7 +18,7 @@ const TechStack = () => {
     const toolsTechs = [
         { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
         { name: 'Insomnia', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/insomnia/insomnia-original.svg' },
-        { name: 'Beekeeper', icon: '/assets/beekeeper.png' },
+        { name: 'Beekeeper', icon: `${process.env.PUBLIC_URL}/assets/beekeeper.png` },
     ];
 
     return (
