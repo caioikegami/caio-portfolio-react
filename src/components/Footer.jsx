@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <p className="footer-copyright">
-                © {currentYear} Todos os direitos reservados. Built with high-octane precision.
+                © {currentYear} Todos os direitos reservados. Produzido por Caio Ikegami
             </p>
         </footer>
     );

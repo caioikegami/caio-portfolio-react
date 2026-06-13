@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import Loading from './components/Loading';
 import SobreMim from './pages/SobreMim';
+import Portfolio from './pages/Porfolio'
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
@@ -20,13 +22,14 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-  
+
   if (isLoading) {
     return <Loading />;
   }
 
   return (
     <Router basename="/caio-portfolio-react">
+      <ScrollToTop />
       <div className="App">
         <Header />
         <main>
@@ -39,6 +42,7 @@ function App() {
               </>
             } />
             <Route path="/sobremim" element={<SobreMim />} />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </main>
         <Footer />

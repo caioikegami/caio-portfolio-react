@@ -63,10 +63,10 @@ const Projects = () => {
                     <h3 className="projects-title">Projetos em Destaque</h3>
                     <p className="projects-subtitle">Trabalhos recentes que unem técnica e estética.</p>
                 </div>
-                {/*<a href="#projetos" className="projects-link">
+                <Link to="/portfolio" className="projects-link">
                     Ver Todos
                     <span className="material-symbols-outlined">north_east</span>
-                </a>*/}
+                </Link>
             </div>
 
             <div className="projects-carousel-wrapper">

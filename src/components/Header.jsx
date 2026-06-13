@@ -1,9 +1,30 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handlePortfolioClick = (e) => {
+        e.preventDefault();
+
+        // Se estiver na home
+        if (location.pathname === '/') {
+            // Scroll suave até a seção
+            const portfolioSection = document.getElementById('portfolio');
+            if (portfolioSection) {
+                portfolioSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // Se estiver em outra página, redireciona
+            navigate('/portfolio');
+        }
+
+        // Fechar menu mobile
+        setIsMenuOpen(false);
+    };
 
     return (
         <header className="header">
@@ -29,26 +50,69 @@ const Header = () => {
                     </Link>
                 </div>
 
-                {/* NAV DEVE ESTAR AQUI DENTRO ↓ */}
                 <nav className="nav-desktop">
-                    <Link to="/" className="nav-link active">Home</Link>
-                    <a href="#portfolio" className="nav-link">Portfólio</a>
-                    <Link to="/sobremim" className="nav-link">Sobre mim</Link>
+                    <Link
+                        to="/"
+                        className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+                    >
+                        Home
+                    </Link>
+
+                    <a
+                        href="#portfolio"
+                        onClick={handlePortfolioClick}
+                        className={`nav-link ${location.pathname === '/portfolio' ? 'active' : ''}`}
+                    >
+                        Portfólio
+                    </a>
+
+                    <Link
+                        to="/sobremim"
+                        className={`nav-link ${location.pathname === '/sobremim' ? 'active' : ''}`}
+                    >
+                        Sobre mim
+                    </Link>
                 </nav>
 
-                {/* HEADER-RIGHT DEVE ESTAR AQUI DENTRO ↓ */}
                 <div className="header-right">
                     <img src={`${process.env.PUBLIC_URL}/favicon-32x32.png`} alt="favicon-Caio" />
                 </div>
             </div>
 
-            {/* Mobile Menu - FORA do header-content */}
+            {/* Mobile Menu */}
             {isMenuOpen && (
                 <nav className="nav-mobile">
-                    <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                    <a href="#portfolio" className="nav-link" onClick={() => setIsMenuOpen(false)}>Portfólio</a>
-                    <Link to="/sobremim" className="nav-link" onClick={() => setIsMenuOpen(false)}>Sobre mim</Link>
-                    <a href="#contato" className="nav-link" onClick={() => setIsMenuOpen(false)}>Permissão</a>
+                    <Link
+                        to="/"
+                        className="nav-link"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Home
+                    </Link>
+
+                    <a
+                        href="#portfolio"
+                        className="nav-link"
+                        onClick={handlePortfolioClick}
+                    >
+                        Portfólio
+                    </a>
+
+                    <Link
+                        to="/sobremim"
+                        className="nav-link"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Sobre mim
+                    </Link>
+
+                    <a
+                        href="#contato"
+                        className="nav-link"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Permissão
+                    </a>
                 </nav>
             )}
         </header>
