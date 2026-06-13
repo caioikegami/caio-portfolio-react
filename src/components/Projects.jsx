@@ -22,7 +22,7 @@ const Projects = () => {
             id: 2,
             title: 'Site Márcio Conceição - Programa Compatíveis',
             description: 'Site com Pagina de apresentação do programa compatíveis, utilizado Tailwind para criar uma interface dinâmica e responsiva, com foco em design moderno e usabilidade.',
-            image: `${process.env.PUBLIC_URL}/assets/projetocompativeis.png'`,
+            image: `${process.env.PUBLIC_URL}/assets/projetocompativeis.png`,
             tags: ['Services', 'Front-end', 'Tailwind'],
             tagColors: ['primary', 'primary'],
             link: 'https://caioikegami.github.io/projeto-compativeis/compativeis.html'
@@ -31,7 +31,7 @@ const Projects = () => {
             id: 3,
             title: 'DevSorteio',
             description: 'Ferramenta de Sorteio de números. Aonde você pode inserir dois valores para sortear números dentro do intervalo deles.',
-            image: `${process.env.PUBLIC_URL}/assets/devsorteio.png'`,
+            image: `${process.env.PUBLIC_URL}/assets/devsorteio.png`,
             tags: ['Tool', 'Front-end', 'HTML', 'CSS', 'JavaScript'],
             tagColors: ['primary', 'primary', 'secundary'],
             link: 'https://caioikegami.github.io/DevSorteioJS/'
@@ -40,7 +40,7 @@ const Projects = () => {
             id: 4,
             title: 'Ike Convert-Money',
             description: 'Ferramenta para conversão de moedas, aplicando aprendizado em HTML, CSS e Javascript',
-            image: `${process.env.PUBLIC_URL}/assets/ikeconvertmoney.png'`,
+            image: `${process.env.PUBLIC_URL}/assets/ikeconvertmoney.png`,
             tags: ['Tool', 'Front-end', 'HTML', 'CSS', 'JavaScript'],
             tagColors: ['primary', 'primary'],
             link: 'https://caioikegami.github.io/ConvertMoneyJS/'
