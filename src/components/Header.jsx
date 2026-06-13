@@ -38,7 +38,7 @@ const Header = () => {
 
                 {/* HEADER-RIGHT DEVE ESTAR AQUI DENTRO ↓ */}
                 <div className="header-right">
-                    <img src={`${process.env.PUBLIC_URL}/favicon-32x32.png`} alt="favicon-Caio" />
+                    <img src={`${process.env.PUBLIC_URL}/favicon-32x32.png'`} alt="favicon-Caio" />
                 </div>
             </div>
 

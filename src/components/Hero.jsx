@@ -136,7 +136,7 @@ const Hero = () => {
                             <div className="hero-image-container">
                                 <img
                                     className="hero-image"
-                                    src={`${process.env.PUBLIC_URL}/assets/Caio1.png`}
+                                    src={`${process.env.PUBLIC_URL}/assets/Caio1.png'`}
                                     alt="Caio Ikegami"
                                 />
                                 <div className="hero-image-overlay"></div>
