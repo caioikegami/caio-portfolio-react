@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/caio-portfolio-react/static/css/main.a8a3177a.css",
+    "main.css": "/caio-portfolio-react/static/css/main.9a3b97c2.css",
     "main.js": "/caio-portfolio-react/static/js/main.01e71080.js",
     "static/js/453.0dc48467.chunk.js": "/caio-portfolio-react/static/js/453.0dc48467.chunk.js",
     "index.html": "/caio-portfolio-react/index.html",
-    "main.a8a3177a.css.map": "/caio-portfolio-react/static/css/main.a8a3177a.css.map",
+    "main.9a3b97c2.css.map": "/caio-portfolio-react/static/css/main.9a3b97c2.css.map",
     "main.01e71080.js.map": "/caio-portfolio-react/static/js/main.01e71080.js.map",
     "453.0dc48467.chunk.js.map": "/caio-portfolio-react/static/js/453.0dc48467.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8a3177a.css",
+    "static/css/main.9a3b97c2.css",
     "static/js/main.01e71080.js"
   ]
 }
