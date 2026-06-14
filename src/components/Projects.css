@@ -276,15 +276,43 @@
     }
 }
 
-/* Desktop */
+/* RESPONSIVO */
 @media (min-width: 768px) {
     .swipe-indicator {
         display: none;
     }
+
 }
 
 @media (min-width: 1024px) {
     .projects-title {
         font-size: 2.5rem;
+    }
+}
+
+/* Forçar posição dos botões Swiper */
+.projects-swiper .swiper-button-prev,
+.projects-swiper .swiper-button-next {
+    top: 40% !important;
+}
+
+/* Sobrescrever transform inline do Swiper */
+.projects-swiper .swiper-button-prev {
+    left: 10px !important;
+    right: auto !important;
+}
+
+.projects-swiper .swiper-button-next {
+    right: 10px !important;
+    left: auto !important;
+}
+
+/* Mobile - posição específica */
+@media (max-width: 767px) {
+
+    .projects-swiper .swiper-button-prev,
+    .projects-swiper .swiper-button-next {
+        top: 40% !important;
+        /* Mais para cima no mobile */
     }
 }
