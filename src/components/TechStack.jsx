@@ -13,12 +13,20 @@ const TechStack = () => {
     const backendTechs = [
         { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
         { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+        { name: 'Python', icon: 'https://skillicons.dev/icons?i=python' },
+        { name: 'MongoDB', icon: 'https://skillicons.dev/icons?i=mongodb' },
+        { name: 'Express', icon: 'https://skillicons.dev/icons?i=express' },
     ];
 
     const toolsTechs = [
+        { name: 'VS Code', icon: 'https://skillicons.dev/icons?i=vscode' },
+        { name: 'Git', icon: 'https://skillicons.dev/icons?i=git' },
+        { name: 'GitHub', icon: 'https://skillicons.dev/icons?i=github' },
         { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
         { name: 'Insomnia', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/insomnia/insomnia-original.svg' },
         { name: 'Beekeeper', icon: `${process.env.PUBLIC_URL}/assets/beekeeper.png` },
+        { name: 'Figma', icon: 'https://skillicons.dev/icons?i=figma' },
+        { name: 'Photoshop', icon: 'https://skillicons.dev/icons?i=ps' },
     ];
 
     return (

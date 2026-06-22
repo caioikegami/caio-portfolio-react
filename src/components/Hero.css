@@ -235,6 +235,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.75rem;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .stat-item:hover {
@@ -317,7 +318,27 @@
     border-color: rgba(8, 231, 0, 0.3);
 }
 
-/* Desktop */
+/* MOBILE - MENOR que 768px */
+@media (max-width: 767px) {
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stat-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-label {
+        text-align: center;
+    }
+}
+
+/* DESKTOP/TABLET - MAIOR que 768px */
 @media (min-width: 768px) {
     .hero-stats {
         grid-template-columns: repeat(3, 1fr);
@@ -345,9 +366,11 @@
 
     .stat-label {
         font-size: 0.8rem;
+        text-align: center;
     }
 }
 
+/* DESKTOP GRANDE - MAIOR que 1024px */
 @media (min-width: 1024px) {
     .stat-number {
         font-size: 2.5rem;
@@ -357,4 +380,3 @@
         font-size: 0.875rem;
     }
 }
-
