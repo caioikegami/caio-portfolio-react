@@ -35,10 +35,10 @@ const SobreMim = () => {
                         <span className="sobre-label">Sobre Mim</span>
                         <h1 className="sobre-title">
                             Quem é<br />
-                            <span className="text-gradient-creative">Caio Ikegami?</span>
+                            <span className="text-gradient-creative">Caio Ferreira?</span>
                         </h1>
                         <h2 className="sobre-description">
-                            Desenvolvedor Web Freelancer | Full Stack em formação pela DevClub
+                            Desenvolvedor Full Stack | DevClub
                         </h2>
                     </div>
                 </ScrollAnimation>
@@ -46,7 +46,7 @@ const SobreMim = () => {
                     <div className="sobre-hero-image">
                         <div className="sobre-image-wrapper">
                             <img src={`${process.env.PUBLIC_URL}/assets/Caio1.png`}
-                                alt="Caio Ikegami" className="sobre-profile-img" />
+                                alt="Caio Ferreira" className="sobre-profile-img" />
                             <div className="sobre-image-overlay"></div>
                         </div>
                     </div>

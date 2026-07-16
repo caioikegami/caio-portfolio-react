@@ -38,7 +38,7 @@ const Projects = () => {
         },
         {
             id: 4,
-            title: 'Ike Convert-Money',
+            title: 'Convert-Money',
             description: 'Ferramenta para conversão de moedas, aplicando aprendizado em HTML, CSS e Javascript',
             image: `${process.env.PUBLIC_URL}/assets/ikeconvertmoney.png`,
             tags: ['Tool', 'Front-end', 'HTML', 'CSS', 'JavaScript'],
@@ -47,7 +47,7 @@ const Projects = () => {
         },
         {
             id: 4,
-            title: 'Ikepô-Jokenpô',
+            title: 'Jokenpô Game',
             description: 'Jogo de Jokenpô para praticar HTML, CSS e JavaScript',
             image: `${process.env.PUBLIC_URL}/assets/ikepojokenpo.png`,
             tags: ['Game', 'Front-end', 'HTML', 'CSS', 'JavaScript'],

@@ -22,7 +22,7 @@ const Loading = () => {
     <div className="loading-screen">
       <div className="loading-content">
         <h1 className="loading-name">
-          <span className="loading-name-first">Caio Ikegami</span>
+          <span className="loading-name-first">Caio Ferreira</span>
         </h1>
         <div className="loading-bar-wrapper">
           <div className="loading-bar">

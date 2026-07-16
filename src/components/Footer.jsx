@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <h5 className="footer-title">CAIO IKEGAMI</h5>
+            <h5 className="footer-title">CAIO FERREIRA</h5>
 
             <div className="footer-links">
                 <a href="https://github.com/caioikegami" target="_blank" rel="noopener noreferrer" className="footer-link">
@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <p className="footer-copyright">
-                © {currentYear} Todos os direitos reservados. Produzido por Caio Ikegami
+                © {currentYear} Todos os direitos reservados. Produzido por Caio Ferreira
             </p>
         </footer>
     );

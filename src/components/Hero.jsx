@@ -63,15 +63,14 @@ const Hero = () => {
 
                         <ScrollAnimation animation="fade-in-right" delay={100}>
                             <h2 className="hero-title">
-                                Soluções Digitais para <br />
-                                <span className="text-gradient-creative">seu negócio ou carreira</span>
+                                Desenvolvedor <span className="text-gradient-creative"> Full Stack </span>
                             </h2>
                         </ScrollAnimation>
 
                         <ScrollAnimation animation="fade-in-right" delay={200}>
                             <p className="hero-description">
-                                Desenvolvedor Full-stack especializado em interfaces de alta performance e
-                                ecossistemas digitais. Transformo código em experiência.
+                                Especialista em interfaces de alta performance e
+                                ecossistemas digitais. Transformo código em experiência com criatividade.
                             </p>
                         </ScrollAnimation>
 
@@ -137,7 +136,7 @@ const Hero = () => {
                                 <img
                                     className="hero-image"
                                     src={`${process.env.PUBLIC_URL}/assets/Caio1.png`}
-                                    alt="Caio Ikegami"
+                                    alt="Caio Ferreira"
                                 />
                                 <div className="hero-image-overlay"></div>
                             </div>

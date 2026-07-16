@@ -41,7 +41,7 @@ const Header = () => {
                     <Link to="/" className="logo-link">
                         <div className="hacker-container-header">
                             <div className="hacker-btn-header">
-                                Caio Ikegami
+                                Caio Ferreira
                             </div>
                             <div data-text="carregando" className="hacker-tooltip-header">
                                 <span>Dev. FullStack</span>
