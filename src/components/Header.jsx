@@ -75,7 +75,7 @@ const Header = () => {
                 </nav>
 
                 <div className="header-right">
-                    <img src={`${process.env.PUBLIC_URL}/favicon-32x32.png`} alt="favicon-Caio" />
+                    <img class="header-logo" src={`${process.env.PUBLIC_URL}/favicon-32x32.png`} alt="favicon-Caio" />
                 </div>
             </div>
 

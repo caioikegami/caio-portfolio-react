@@ -35,6 +35,14 @@
     transform: scale(0.95);
 }
 
+.header-right img {
+  width: 68px;  
+  height: 68px;
+  object-fit: contain; /* Mantém proporção */
+  border-radius: 8px; /* Opcional: arredondar cantos */
+}
+
+
 /* ========== HACKER LOGO ANIMATION ========== */
 .logo-link {
     text-decoration: none;

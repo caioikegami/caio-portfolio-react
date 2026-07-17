@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import ScrollAnimation from '../components/ScrollAnimation';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -23,15 +21,25 @@ const Portfolio = () => {
         {
             id: 1,
             category: 'frontend',
-            title: 'Mario Bros Serviços 🍄',
-            description: 'Projeto de estudo para sites de serviços. Utilizado HTML, CSS e JavaScript para criar uma experiência interativa e visualmente atraente.',
-            image: `${process.env.PUBLIC_URL}/assets/mariodesktop.png`,
-            tags: ['HTML', 'CSS', 'JavaScript'],
-            link: 'https://seu-link.com',
-            github: 'https://github.com/seu-usuario/projeto'
+            title: 'Fabiano Rodrigues - Nutricionista Funcional',
+            description: 'Projeto de site para profissional com portfolio showcase e integração de APIs para conteúdo midiático, aplicando princípios de UI/UX e responsividade.',
+            image: `${process.env.PUBLIC_URL}/assets/fabianonutri.png`,
+            tags: ['Services', 'Front-end', 'React'],
+            link: 'https://caioikegami.github.io/nutricionista-fabiano/',
+            status: 'em-construcao'
         },
         {
             id: 2,
+            category: ['frontend', 'games'],
+            title: 'Mario Bros Serviços 🍄',
+            description: 'Projeto de estudo para sites de serviços. Utilizado HTML, CSS e JavaScript para criar uma experiência interativa e visualmente atraente, inspirada no universo do Mario Bros. Com Emulador do SNES embutido para jogar',
+            image: `${process.env.PUBLIC_URL}/assets/mariodesktop.png`,
+            tags: ['HTML', 'CSS', 'JavaScript'],
+            link: 'https://caioikegami.github.io/SuperMario/',
+            github: 'https://github.com/caioikegami/SuperMario'
+        },
+        {
+            id: 3,
             category: 'frontend',
             title: 'Projeto Compatíveis - Márcio Conceição',
             description: 'Site com Pagina de apresentação do programa compatíveis, utilizado Tailwind para criar uma interface dinâmica e responsiva, com foco em design moderno e usabilidade.',
@@ -43,8 +51,8 @@ const Portfolio = () => {
 
         // BACK-END
         {
-            id: 3,
-            category: 'backend',
+            id: 4,
+            category: ['frontend', 'backend'],
             title: 'DevBurguer - Em construção',
             description: 'API robusta para gerenciamento Hamburgueria, vendas e clientes com autenticação.',
             image: `${process.env.PUBLIC_URL}/assets/devburguer.png`,
@@ -56,7 +64,7 @@ const Portfolio = () => {
 
         // FERRAMENTAS
         {
-            id: 4,
+            id: 5,
             category: 'tools',
             title: 'DevSorteio - Sorteador de Números',
             description: 'Ferramenta de Sorteio de números. Aonde você pode inserir dois valores para sortear números dentro do intervalo deles.',
@@ -66,7 +74,7 @@ const Portfolio = () => {
             github: 'https://github.com/caioikegami/DevSorteioJS'
         },
         {
-            id: 5,
+            id: 6,
             category: 'tools',
             title: 'Convert Money - Conversor de Moedas',
             description: 'Vai viajar? Compras internacionais? Converta Real em Dólar, Euro, Yen.',
@@ -76,7 +84,7 @@ const Portfolio = () => {
             github: 'https://github.com/caioikegami/ConvertMoneyJS'
         },
         {
-            id: 6,
+            id: 7,
             category: 'tools',
             title: 'Guitar Dojo 🎸 - Em Construção',
             description: 'Ferramenta para estudo de Guitarra ou outro instrumento, desenvolvida em Python com Metronomo, timer, Base de Backing Track e muito mais.',
@@ -87,7 +95,7 @@ const Portfolio = () => {
             status: 'em-construcao'
         },
         {
-            id: 7,
+            id: 8,
             category: 'tools',
             title: 'DevTab From Video - Em Construção',
             description: 'Ferramenta aonde você gera Tab a partir de um vídeo utilizando I.A.',
@@ -100,7 +108,7 @@ const Portfolio = () => {
 
         // JOGOS
         {
-            id: 8,
+            id: 9,
             category: 'games',
             title: 'Ikepô - Jokenpô',
             description: 'Recriação do clássico Jokenpô para você jogar online contra sua máquina.',
@@ -114,7 +122,12 @@ const Portfolio = () => {
 
     const filteredProjects = activeCategory === 'all'
         ? projects
-        : projects.filter(p => p.category === activeCategory);
+        : projects.filter(p => {
+            if (Array.isArray(p.category)) {
+                return p.category.includes(activeCategory);
+            }
+            return p.category === activeCategory;
+        });
 
     return (
         <div className="portfolio-page">
@@ -132,7 +145,7 @@ const Portfolio = () => {
                 </ScrollAnimation>
             </section>
 
-            {/* Filtros */}
+            {/* Filtros com contador correto */}
             <section className="portfolio-filters-section">
                 <ScrollAnimation animation="fade-in-up" delay={200}>
                     <div className="portfolio-filters">
@@ -147,7 +160,13 @@ const Portfolio = () => {
                                 <span className="filter-count">
                                     {cat.id === 'all'
                                         ? projects.length
-                                        : projects.filter(p => p.category === cat.id).length}
+                                        : projects.filter(p => {
+                                            if (Array.isArray(p.category)) {
+                                                return p.category.includes(cat.id);
+                                            }
+                                            return p.category === cat.id;
+                                        }).length
+                                    }
                                 </span>
                             </button>
                         ))}
@@ -198,15 +217,24 @@ const Portfolio = () => {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="project-content-portfolio">
-                                    {/* ADICIONAR WRAPPER AQUI ↓ */}
                                     <div className="project-badges-wrapper">
-                                        <div className="project-category-badge">
-                                            {categories.find(c => c.id === project.category)?.name}
-                                        </div>
+                                        {/* Mostrar TODAS as categorias */}
+                                        {Array.isArray(project.category) ? (
+                                            // Se for array, mapeia e mostra todos
+                                            project.category.map((cat, idx) => (
+                                                <div key={idx} className="project-category-badge">
+                                                    {categories.find(c => c.id === cat)?.name}
+                                                </div>
+                                            ))
+                                        ) : (
+                                            // Se for string única, mostra só uma
+                                            <div className="project-category-badge">
+                                                {categories.find(c => c.id === project.category)?.name}
+                                            </div>
+                                        )}
 
-                                        {/* BADGE EM CONSTRUÇÃO ↓ */}
+                                        {/* Badges de status */}
                                         {project.status === 'em-construcao' && (
                                             <div className="project-status-badge em-construcao">
                                                 <span className="material-symbols-outlined">construction</span>
@@ -214,7 +242,6 @@ const Portfolio = () => {
                                             </div>
                                         )}
 
-                                        {/* BADGE CONCLUÍDO (opcional) ↓ */}
                                         {project.status === 'concluido' && (
                                             <div className="project-status-badge concluido">
                                                 <span className="material-symbols-outlined">check_circle</span>
@@ -222,7 +249,6 @@ const Portfolio = () => {
                                             </div>
                                         )}
                                     </div>
-                                    {/* FIM DO WRAPPER */}
 
                                     <h3 className="project-title-portfolio">{project.title}</h3>
                                     <p className="project-description-portfolio">{project.description}</p>
@@ -237,7 +263,6 @@ const Portfolio = () => {
                         </ScrollAnimation>
                     ))}
                 </div>
-
                 {/* Mensagem se não tiver projetos */}
                 {filteredProjects.length === 0 && (
                     <div className="no-projects">
@@ -248,7 +273,7 @@ const Portfolio = () => {
             </section>
 
             {/* CTA */}
-            <ScrollAnimation animation="scale-in">
+            <ScrollAnimation ScrollAnimation animation="scale-in" >
                 <section className="portfolio-cta">
                     <h2 className="cta-title-portfolio">Gostou do que viu?</h2>
                     <p className="cta-description-portfolio">

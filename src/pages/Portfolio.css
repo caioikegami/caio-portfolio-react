@@ -349,6 +349,22 @@
     animation: pulse-warning 2s infinite;
 }
 
+.project-category-badge-multi {
+    background: linear-gradient(135deg, rgba(183, 109, 255, 0.2), rgba(5, 102, 217, 0.2));
+    border-color: rgba(183, 109, 255, 0.3);
+    color: var(--color-secondary);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.project-badges-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
 @keyframes pulse-warning {
 
     0%,
