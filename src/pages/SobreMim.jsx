@@ -15,6 +15,11 @@ const SobreMim = () => {
             description: 'Começa a trabalhar como Representante Comercial de Software ERP para farmácias e Drogarias.'
         },
         {
+            year: '2019',
+            title: 'Audiovisual',
+            description: 'Abre uma produtora Audiovisual. Aprende Photoshop, fotografia, edição de vídeo, marketing digital. '
+        },
+        {
             year: '2025',
             title: 'Expansão de Skills',
             description: 'Comecei a estudar Python e enxerga a possibilidade de resolver problemas cotidianos com tecnologia.'
