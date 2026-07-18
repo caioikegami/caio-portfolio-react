@@ -65,8 +65,10 @@ const SobreMim = () => {
                     <ScrollAnimation animation="fade-in-up" delay={200}>
                         <div className="biografia-content">
                             <p>
-                                Sou o Caio, tenho 35 anos, casado com a Renata, pai da Isabela e do Nicolas. Moro em São José dos Campos/SP a 8 meses, era de Sorocaba/SP.
-                                Gosto de criar soluções para problemas utilizando tecnologia e hoje meu foco é fazer parte de um time de tecnologia para trocar experiências.
+                                Sou o Caio, tenho 35 anos, casado com a Renata, pai da Isabela e do Nicolas. Moro em São José dos Campos/SP 
+                                a 8 meses, era de Sorocaba/SP.
+                                Gosto de criar soluções para problemas utilizando tecnologia e hoje meu foco é fazer parte de um time de 
+                                tecnologia para trocar experiências.
                             </p>
                             <p>
                                 Minha jornada com a tecnologia começou aos 15 anos, desmontando computadores e desvendando o hardware.
