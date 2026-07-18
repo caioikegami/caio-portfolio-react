@@ -65,6 +65,10 @@ const SobreMim = () => {
                     <ScrollAnimation animation="fade-in-up" delay={200}>
                         <div className="biografia-content">
                             <p>
+                                Sou o Caio, tenho 35 anos, casado com a Renata, pai da Isabela e do Nicolas. Moro em São José dos Campos/SP a 8 meses, era de Sorocaba/SP.
+                                Gosto de criar soluções para problemas utilizando tecnologia e hoje meu foco é fazer parte de um time de tecnologia para trocar experiências.
+                            </p>
+                            <p>
                                 Minha jornada com a tecnologia começou aos 15 anos, desmontando computadores e desvendando o hardware.
                                 De lá para cá, acumulei mais de 7 anos de experiência na linha de frente de um Software para farmácias e
                                 drogarias, atuando desde a venda e implantação até o suporte técnico avançado e manutenção de bancos de dados.
@@ -74,7 +78,7 @@ const SobreMim = () => {
                             <p>
                                 Além da tecnologia, a música sempre foi meu alicerce. Como guitarrista, desenvolvi a disciplina rigorosa,
                                 o raciocínio rápido e a criatividade que hoje aplico diretamente na escrita de códigos limpos e eficientes.
-                                Minha bagagem ainda inclui anos no mercado de marketing digital, produção audiovisual e e-commerce,
+                                Minha bagagem ainda inclui 5 anos no mercado de marketing digital, produção audiovisual e e-commerce,
                                 o que me permite entender um projeto muito além das linhas de código.
                             </p>
                             <p>
@@ -85,7 +89,7 @@ const SobreMim = () => {
                             <div className="bio-highlight">
                                 <span className="material-symbols-outlined">star</span>
                                 <p>
-                                    <strong>Como posso te ajudar:</strong> No desenvolvimento de aplicações web robustas, interfaces inteligentes
+                                    <strong>Como posso te apoiar:</strong> No desenvolvimento de aplicações web robustas, interfaces inteligentes
                                     e soluções que unem design, performance e foco total na experiência do usuário.
                                 </p>
                             </div>
